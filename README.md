@@ -56,3 +56,7 @@ Este es un repositorio personal de práctica, pero si tienes sugerencias o mejor
 - Abrir un issue
 - Crear un pull request
 - Compartir feedback
+
+## 📄 Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE) - siéntete libre de usar, copiar y modificar.
