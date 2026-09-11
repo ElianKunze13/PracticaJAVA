@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -46,7 +48,7 @@ public class Main {
             System.out.println(numCuatro + " " + numCinco + " " + numSeis);
             System.out.println(numSiete + " " + numOcho + " " + numNueve + " " + numDiez);
 
-        } else{
+        } else {
             System.out.println("EJERCICIO n2");
             /**  Escribe una función 'static boolean esCapicua(int numero)' que devuelva true si el número
              *  se lee igual de izquierda a derecha que de derecha a izquierda, y false en caso contrario.
@@ -56,48 +58,41 @@ public class Main {
              */
 
             Scanner dato = new Scanner(System.in);
+            //atributo tipo lista para guardar los numeros guardados por usuario
+            List<Integer> numNuevo = new ArrayList<>();
+            //atributo para guardar como numero entero la lista de numeros ingresados
+            int numero = 0;
 
-            System.out.println("Ingrese un numero entero positivo. Si no desea agregar mas numeros a la lista," +
-                    " ingrese 0 para continuar con el programa");
-            int numNuevo = dato.nextInt();
+            System.out.println("Ingrese numero entero positivo. Si no desea agregar mas numeros a la lista," +
+                    " ingrese 0 para definir si numero es capicua y continuar con el programa");
 
-            double numero = 0;
-            numero = Double.parseDouble(String.valueOf(numNuevo));
+            //se atribuye valor a la lista
+            numNuevo.add(dato.nextInt());
 
-            while (numNuevo != 0){
-                System.out.println("Ingrese otro numero entero positivo. Si no desea agregar mas numeros a la lista," +
-                        " ingrese 0 para continuar con el programa");
+            //metodo loop para determinar si ultimo numero ingresado es 0, y de ser asi,
+            // determinar si numero entero es capicua
+            while (numNuevo.get(numNuevo.size() - 1) != 0) {
 
-                numNuevo = dato.nextInt();
-                numero = Double.parseDouble(String.valueOf(numNuevo));
+                System.out.println("Ingrese numero entero positivo. Si no desea agregar mas numeros a la lista," +
+                        " ingrese 0 para definir si numero es capicua y continuar con el programa");
 
-                if (numNuevo == 0){
-                    if (FuncionCapicua.esCapicua(numero)){
-                        System.out.println("El numero " + numero + " es capicua");
-                        break;
-                    } else {
-                        System.out.println("El numero " + numero + " no es capicua");
-                        break;
-                    }
+                //se atribuye valor a la lista
+                numNuevo.add(dato.nextInt());
+
+                //metodo para convertir la lista de numeros a un solo numero
+                numero = Integer.parseInt(String.valueOf(numNuevo));
+            }
+
+
+                if (FuncionCapicua.esCapicua(numero)) {
+                    System.out.println("El numero " + numero + " es capicua");
+                    System.out.println("Fin del programa");
                 } else {
-                    if (FuncionCapicua.esCapicua(numero)){
-                        System.out.println("El numero " + numero + " es capicua");
-                        break;
-                    } else {
-                        System.out.println("El numero " + numero + " no es capicua");
-                        break;
-                    }
-            }
+                    System.out.println("El numero " + numero + " no es capicua");
+                    System.out.println("Fin del programa");
+                }
+
+
         }
-
-            if (FuncionCapicua.esCapicua(numero)){
-                System.out.println("El numero " + numero + " es capicua");
-            } else {
-                System.out.println("El numero " + numero + " no es capicua");
-            }
-
-
-
     }
-}
 }
