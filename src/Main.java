@@ -68,9 +68,9 @@ public class Main {
                 System.out.println("Ingrese nuevo numero entero positivo. " +
                         "Si desea finalizar programa, ingrese 0.");
 
-              numero = dato.nextInt();
+                numero = dato.nextInt();
 
-                if(numero == 0){
+                if (numero == 0) {
                     System.out.println("Fin de programa");
                     break;
                 }
@@ -92,15 +92,15 @@ public class Main {
          */
 
         List<Integer> numeroNuevo = new ArrayList<>();
-
-        while(numeroNuevo.lastIndexOf(-1) != -1){
+        int valor;
+        while (true) {
             System.out.println("Ingrese un numero entero positivo." +
                     "Si desea finalizar programa, ingrese -1");
+            valor = respuesta.nextInt();
+            numeroNuevo.add(valor);
 
-            numeroNuevo.add(respuesta.nextInt());
 
-
-            if (numeroNuevo.lastIndexOf(-1) == -1){
+            if (valor == -1) {
                 System.out.println("Fin de programa");
                 break;
             }
