@@ -7,7 +7,7 @@ public class Main {
 
         Scanner respuesta = new Scanner(System.in);
 
-        System.out.println("¿Desea probar ejercicio nº1? SI - NO");
+        System.out.println("¿Desea probar ejercicio nº1 (piramide de numeros)? SI - NO");
         String opcion = respuesta.nextLine();
 
         if (opcion.equalsIgnoreCase("SI")) {
@@ -49,6 +49,7 @@ public class Main {
             System.out.println(numSiete + " " + numOcho + " " + numNueve + " " + numDiez);
 
         } else {
+
             System.out.println("EJERCICIO n2");
             /**  Escribe una función 'static boolean esCapicua(int numero)' que devuelva true si el número
              *  se lee igual de izquierda a derecha que de derecha a izquierda, y false en caso contrario.
@@ -58,11 +59,8 @@ public class Main {
              */
 
             Scanner dato = new Scanner(System.in);
-
-
             //atributo para guardar numeros ingresados
             int numero = -1;
-
 
             //metodo loop para determinar si determinar si numero entero es capicua
             while (numero != 0) {
@@ -82,15 +80,33 @@ public class Main {
                 } else {
                     System.out.println("El numero " + numero + " no es capicua");
                 }
-
-
-
-
             }
-
-
-
-
         }
+
+        System.out.println("EJERCICIO n3");
+        /**
+         * Escribe un programa que pida al usuario una lista de números enteros positivos
+         * y los almacene en un array. A continuación, el programa debe mostrar 2 listas:
+         * lista original con todos los numeros introducidos, y otra
+         * lista igual pero eliminando los números duplicados(si existen y dejando solo una unica muestra de dichos numeros repetidos).
+         */
+
+        List<Integer> numeroNuevo = new ArrayList<>();
+
+        while(numeroNuevo.lastIndexOf(-1) != -1){
+            System.out.println("Ingrese un numero entero positivo." +
+                    "Si desea finalizar programa, ingrese -1");
+
+            numeroNuevo.add(respuesta.nextInt());
+
+
+            if (numeroNuevo.lastIndexOf(-1) == -1){
+                System.out.println("Fin de programa");
+                break;
+            }
+        }
+        System.out.println("Lista original: " + numeroNuevo);
+        System.out.println("Lista sin repetidos: " + FuncionDevolverLista.eliminarRepetidos(numeroNuevo));
+
     }
 }
