@@ -7,6 +7,7 @@ public class FuncionCapicua {
         String numStr = String.valueOf(numero);
         //invierte la cadena y la guarda en variable reversedStr
         String reversedStr = new StringBuilder(numStr).reverse().toString();
+
         //compara la cadena original con la invertida y devuelve true si son iguales, false en caso contrario
         if (numStr.equals(reversedStr)) {
             return true;

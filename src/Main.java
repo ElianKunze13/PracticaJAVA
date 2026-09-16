@@ -58,42 +58,36 @@ public class Main {
              */
 
             Scanner dato = new Scanner(System.in);
-            //atributo tipo lista para guardar los numeros guardados por usuario
-            List<Integer> numNuevo = new ArrayList<>();
 
 
-
-            //atributo para guardar como numero entero la lista de numeros ingresados
-            int numero = 0;
-
+            //atributo para guardar numeros ingresados
+            int numero = -1;
 
 
-            //metodo loop para determinar si ultimo numero ingresado es 0, y de ser asi,
-            // determinar si numero entero es capicua
-            while (true) {
+            //metodo loop para determinar si determinar si numero entero es capicua
+            while (numero != 0) {
 
-                System.out.println("Ingrese numero entero positivo. Si no desea agregar mas numeros a la lista," +
-                        " ingrese 0 para definir si numero es capicua y finalizar programa");
+                System.out.println("Ingrese nuevo numero entero positivo. " +
+                        "Si desea finalizar programa, ingrese 0.");
 
-                //se atribuye valor a la lista
-                numNuevo.add(dato.nextInt());
+              numero = dato.nextInt();
 
-                if(numNuevo.lastIndexOf(0) == 0){
+                if(numero == 0){
+                    System.out.println("Fin de programa");
                     break;
                 }
 
-                //metodo para convertir la lista de numeros a un solo numero
-                numero = Integer.parseInt(String.valueOf(numNuevo));
+                if (FuncionCapicua.esCapicua(numero)) {
+                    System.out.println("El numero " + numero + " es capicua");
+                } else {
+                    System.out.println("El numero " + numero + " no es capicua");
+                }
+
+
+
 
             }
 
-            if (FuncionCapicua.esCapicua(numero)) {
-                System.out.println("El numero " + numero + " es capicua");
-                System.out.println("Fin del programa");
-            } else {
-                System.out.println("El numero " + numero + " no es capicua");
-                System.out.println("Fin del programa");
-            }
 
 
 
