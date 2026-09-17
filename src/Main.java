@@ -118,6 +118,14 @@ public class Main {
          *  Escribe una función static int contarPalabra(String frase, String palabra) que realice el cálculo.
          * */
 
+Scanner valorNuevo = new Scanner(System.in);
+        System.out.println("Ingrese FRASE nueva ");
+        String frase = valorNuevo.nextLine();
+
+        System.out.println("Ingrese PALABRA nueva para revisar si esta repetida en frase ingresada");
+        String palabra = valorNuevo.nextLine();
+
+        System.out.println(Funciones.contarPalabra(frase,palabra));
 
     }
 }
