@@ -41,6 +41,7 @@ public class Funciones {
         return listaSinRepetidos;
     }
 
+    /**funcion para contar palabras*/
     public static String contarPalabra(String frase, String palabra) {
         //se convierte frase a minuscula para evitar errores y se separan con espacios
         String[] fraseMin = frase.toLowerCase().split(" ");

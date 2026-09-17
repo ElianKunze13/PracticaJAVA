@@ -7,8 +7,31 @@ public class Main {
 
         Scanner respuesta = new Scanner(System.in);
 
-        System.out.println("¿Desea probar ejercicio nº1 (piramide de numeros)? SI - NO");
+        System.out.println("INGRESE NUMERO DE EJERCICIO QUE DESEA PROBAR");
+        System.out.println("1 - Piramide de numeros ");
+        System.out.println("2 - Numero capicua ");
+        System.out.println("3 - Numero repetido en lista ");
+        System.out.println("4 - Palabra repetida en frase ");
+
+
         String opcion = respuesta.nextLine();
+
+        switch(opcion) {
+            case "1":
+                break;
+            case "2":
+                break;
+            case "3":
+                break;
+            case "4":
+                break;
+            case "-1":
+                System.out.println("FIN DEL PROGRAMA");
+                break;
+            default:
+                System.out.println("Opcion no valida, ");
+                break;
+        }
 
         if (opcion.equalsIgnoreCase("SI")) {
             System.out.println("EJERCICIO n1");
@@ -49,7 +72,7 @@ public class Main {
             System.out.println(numSiete + " " + numOcho + " " + numNueve + " " + numDiez);
 
         } else {
-
+/*****************************************************************************************************************/
             System.out.println("EJERCICIO n2");
             /**  Escribe una función 'static boolean esCapicua(int numero)' que devuelva true si el número
              *  se lee igual de izquierda a derecha que de derecha a izquierda, y false en caso contrario.
@@ -82,6 +105,7 @@ public class Main {
                 }
             }
         }
+/*****************************************************************************************************************/
 
         System.out.println("EJERCICIO n3");
         /**
@@ -111,7 +135,7 @@ public class Main {
         System.out.println("Lista original: " + numeroNuevo);
         System.out.println("Lista sin repetidos: " + Funciones.eliminarRepetidos(numeroNuevo));
 
-
+/*****************************************************************************************************************/
         System.out.println("EJERCICIO n4");
         /** Implementa un programa que pida una frase y una palabra. Debe contar cuántas veces aparece la palabra en la frase,
          *  sin distinguir mayúsculas/minúsculas y sin tener en cuenta signos de puntuación (puedes eliminar comas, puntos, etc.).
@@ -126,6 +150,7 @@ Scanner valorNuevo = new Scanner(System.in);
         String palabra = valorNuevo.nextLine();
 
         System.out.println(Funciones.contarPalabra(frase,palabra));
+/*****************************************************************************************************************/
 
     }
 }
