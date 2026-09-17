@@ -11,6 +11,9 @@ public class FuncionDevolverLista {
         for (Integer numero : listaOriginal) {
             if (!listaSinRepetidos.contains(numero)) {
                 listaSinRepetidos.add(numero);
+                if(numero == -1){
+                    listaSinRepetidos.remove(Integer.valueOf(-1));
+                }
             }
         }
 

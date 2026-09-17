@@ -99,6 +99,9 @@ public class Main {
             valor = respuesta.nextInt();
             numeroNuevo.add(valor);
 
+            if (valor == -1) {
+                numeroNuevo.remove(Integer.valueOf(-1));
+            }
 
             if (valor == -1) {
                 System.out.println("Fin de programa");
