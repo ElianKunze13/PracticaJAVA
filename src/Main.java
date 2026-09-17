@@ -75,7 +75,7 @@ public class Main {
                     break;
                 }
 
-                if (FuncionCapicua.esCapicua(numero)) {
+                if (Funciones.esCapicua(numero)) {
                     System.out.println("El numero " + numero + " es capicua");
                 } else {
                     System.out.println("El numero " + numero + " no es capicua");
@@ -109,7 +109,15 @@ public class Main {
             }
         }
         System.out.println("Lista original: " + numeroNuevo);
-        System.out.println("Lista sin repetidos: " + FuncionDevolverLista.eliminarRepetidos(numeroNuevo));
+        System.out.println("Lista sin repetidos: " + Funciones.eliminarRepetidos(numeroNuevo));
+
+
+        System.out.println("EJERCICIO n4");
+        /** Implementa un programa que pida una frase y una palabra. Debe contar cuántas veces aparece la palabra en la frase,
+         *  sin distinguir mayúsculas/minúsculas y sin tener en cuenta signos de puntuación (puedes eliminar comas, puntos, etc.).
+         *  Escribe una función static int contarPalabra(String frase, String palabra) que realice el cálculo.
+         * */
+
 
     }
 }
