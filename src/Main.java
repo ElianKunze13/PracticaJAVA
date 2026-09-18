@@ -146,6 +146,23 @@ public class Main {
 
                     break;
                 /*****************************************************************************************************************/
+                case "5":
+                    System.out.println("EJERCICIO n5");
+                    /**Crea un programa principal que cree varios libros, los preste/de vuelva y muestre
+                     su estado.
+                     Define una clase Libro con atributos:
+                     •titulo (String)   •autor (String) •numPaginas (int)
+                     •prestado (boolean, inicializado a false)
+                     Incluye un constructor que reciba título, autor y número de páginas.
+                     Métodos:
+                     •prestar() -cambia a true solo si no está prestado-,
+                     •devolver() -cambia a false),
+                     •toString() -que devuelva una representación legible del libro.
+                     */
+
+
+                    break;
+                /*****************************************************************************************************************/
                 case "-1":
                     System.out.println("FIN DEL PROGRAMA");
                     break;
@@ -157,7 +174,7 @@ public class Main {
             }
 
             System.out.println("Desea probar otro ejercicio? (si/no)");
-            continuar= respuesta.nextLine();
+            continuar = respuesta.nextLine();
 
             //metodo para determinar si usuario desea continuar programa
             // se compara respuesta de usuario: si devuelve "SI" programa debe devolver true
@@ -165,7 +182,7 @@ public class Main {
             // y si devuelve "NO" deve devolver false para que se finalice programa
             if (continuar.equalsIgnoreCase("SI")) {
                 System.out.println("cargando ejercicios nuevamente, espere un momento...");
-            }else {
+            } else {
                 System.out.println("Finalizando programa");
                 break;
             }
