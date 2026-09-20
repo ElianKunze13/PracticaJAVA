@@ -155,7 +155,31 @@ public class Main {
                      •devolver() -cambia a false),
                      •toString() -que devuelva una representación legible del libro.
                      */
+                    List<Libro> libros = new ArrayList<>();
+                    int tamaño;
 
+                    System.out.println("Creando libro nuevo...");
+                    System.out.println("ingrese cantidad de libros a crear");
+                    tamaño = dato.nextInt();
+                    dato.nextLine(); // Consume el salto de línea pendiente.
+
+                    for (int i = 0; i < tamaño; i++) {
+                        System.out.println("Ingrese titulo del libro nº " + (i + 1));
+                        String titulo = dato.nextLine();
+
+                        System.out.println("Ingrese autor del libro nº " + (i + 1));
+                        String autor = dato.nextLine();
+
+                        System.out.println("Ingrese cantidad de páginas del libro nº " + (i + 1));
+                        int numPaginas = dato.nextInt();
+                        dato.nextLine(); // Consume el salto de línea pendiente.
+
+                        libros.add(new Libro(titulo, autor, numPaginas));
+                    }
+
+                    for (Libro libro : libros) {
+                        System.out.println(libro);
+                    }
 
                     break;
                 /*****************************************************************************************************************/
@@ -188,6 +212,7 @@ public class Main {
 
         System.out.println("FIN DEL PROGRAMA");
     }
+
     private static final Scanner dato = new Scanner(System.in);
 
 }

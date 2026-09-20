@@ -4,41 +4,70 @@ public class Libro {
     private int numPaginas;
     private boolean prestado;
 
-    public Libro(String titulo, String autor, int numPaginas, boolean prestado){
-        this.titulo = "titulo";
-        this.autor = "autor";
-        this.numPaginas = -1;
+    public Libro(String titulo, String autor, int numPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numPaginas = numPaginas;
         this.prestado = false;
-
     }
-    public Libro(){
+
+    public Libro(String titulo, String autor, int numPaginas, boolean prestado) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numPaginas = numPaginas;
+        this.prestado = prestado;
+    }
+
+    public Libro() {
         this.titulo = titulo;
         this.autor = autor;
         this.numPaginas = numPaginas;
     }
-    public String getTitulo(){
+
+    public String getTitulo() {
         return titulo;
     }
-    public void setTitulo(String titulo){
+
+    public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    public String getAutor(){
+
+    public String getAutor() {
         return autor;
     }
-    public void setAutor(String autor){
+
+    public void setAutor(String autor) {
         this.autor = autor;
     }
-    public int getNumPaginas(){
+
+    public int getNumPaginas() {
         return numPaginas;
     }
-    public void setNumPaginas(int numPaginas){
+
+    public void setNumPaginas(int numPaginas) {
         this.numPaginas = numPaginas;
     }
-    public boolean isPrestado(){
+
+    public boolean isPrestado() {
         return prestado;
     }
-    public void setPrestado(boolean prestado){
+
+    public void setPrestado(boolean prestado) {
         this.prestado = prestado;
+    }
+
+
+
+    public void prestar() {
+        if(!prestado){
+            this.prestado = true;
+        }else {
+            this.prestado = false;
+        }
+    }
+
+    public void devolver() {
+        this.prestado = false;
     }
 
     @Override
