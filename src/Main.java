@@ -7,7 +7,6 @@ public class Main {
 
         String continuar;
         while (true) {
-            Scanner respuesta = new Scanner(System.in);
 
             System.out.println("INGRESE NUMERO DE EJERCICIO QUE DESEA PROBAR");
             System.out.println("1 - Piramide de numeros ");
@@ -16,7 +15,7 @@ public class Main {
             System.out.println("4 - Palabra repetida en frase ");
 
 
-            String opcion = respuesta.nextLine();
+            String opcion = dato.nextLine();
 
             switch (opcion) {
                 /*****************************************************************************************************************/
@@ -34,7 +33,6 @@ public class Main {
                      Cada fila contiene un número más que la anterior, y los números se escriben en orden creciente.
                      *  El programa debe validar que n sea positivo; si no lo es, volverá a pedirlo.
                      * */
-                    Scanner dato = new Scanner(System.in);
                     System.out.println("Ingrese un numero entero positivo");
                     int num = dato.nextInt();
 
@@ -71,7 +69,6 @@ public class Main {
                      muestra si es capicúa o no (usando la función).
                      */
 
-                    Scanner datoNuevo = new Scanner(System.in);
                     //atributo para guardar numeros ingresados
                     int numero = -1;
 
@@ -81,7 +78,7 @@ public class Main {
                         System.out.println("Ingrese nuevo numero entero positivo. " +
                                 "Si desea finalizar programa, ingrese 0.");
 
-                        numero = datoNuevo.nextInt();
+                        numero = dato.nextInt();
 
                         if (numero == 0) {
                             System.out.println("Fin de programa");
@@ -111,7 +108,7 @@ public class Main {
                     while (true) {
                         System.out.println("Ingrese un numero entero positivo." +
                                 "Si desea finalizar programa, ingrese -1");
-                        valor = respuesta.nextInt();
+                        valor = dato.nextInt();
                         numeroNuevo.add(valor);
 
                         if (valor == -1) {
@@ -135,12 +132,11 @@ public class Main {
                      *  Escribe una función static int contarPalabra(String frase, String palabra) que realice el cálculo.
                      * */
 
-                    Scanner valorNuevo = new Scanner(System.in);
                     System.out.println("Ingrese FRASE nueva ");
-                    String frase = valorNuevo.nextLine();
+                    String frase = dato.nextLine();
 
                     System.out.println("Ingrese PALABRA nueva para revisar si esta repetida en frase ingresada");
-                    String palabra = valorNuevo.nextLine();
+                    String palabra = dato.nextLine();
 
                     System.out.println(Funciones.contarPalabra(frase, palabra));
 
@@ -148,7 +144,7 @@ public class Main {
                 /*****************************************************************************************************************/
                 case "5":
                     System.out.println("EJERCICIO n5");
-                    /**Crea un programa principal que cree varios libros, los preste/de vuelva y muestre
+                    /**Crea un programa principal que cree varios libros, los preste y reciba de vuelva y muestre
                      su estado.
                      Define una clase Libro con atributos:
                      •titulo (String)   •autor (String) •numPaginas (int)
@@ -174,7 +170,7 @@ public class Main {
             }
 
             System.out.println("Desea probar otro ejercicio? (si/no)");
-            continuar = respuesta.nextLine();
+            continuar = dato.nextLine();
 
             //metodo para determinar si usuario desea continuar programa
             // se compara respuesta de usuario: si devuelve "SI" programa debe devolver true
@@ -192,4 +188,6 @@ public class Main {
 
         System.out.println("FIN DEL PROGRAMA");
     }
+    private static final Scanner dato = new Scanner(System.in);
+
 }
