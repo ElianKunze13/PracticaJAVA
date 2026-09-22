@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -180,10 +181,30 @@ public class Main {
                     }
 
                     for (Libro libro : libros) {
-                        System.out.println("Libros creados: " );
-                        System.out.println(libros);
+                        System.out.println("Estan los libros recien creados PRESTADOS por defecto?");
+                        System.out.println(libro.isPrestado());
                     }
 
+                    for (Libro libro : libros) {
+                        System.out.println("Prestando los libros... ");
+                        libro.prestar();
+                    }
+                    for (Libro libro : libros) {
+                        System.out.println("¿Estan los libros PRESTADOS?");
+                        System.out.println(libro.isPrestado());
+                        System.out.println("Lista de libros PRESTADOS...");
+                        System.out.println(libros);
+                    }
+                    for (Libro libro : libros) {
+                        System.out.println("Devolviendo los libros... ");
+                        libro.devolver();
+                    }
+                    for (Libro libro : libros) {
+                        System.out.println("¿Estan los libros PRESTADOS?: ");
+                        System.out.println(libro.isPrestado());
+                        System.out.println("Lista de libros DEVUELTOS...");
+                        System.out.println(libros);
+                    }
                     break;
                 /*****************************************************************************************************************/
                 case "-1":
