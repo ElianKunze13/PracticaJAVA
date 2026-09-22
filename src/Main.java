@@ -205,6 +205,25 @@ public class Main {
                         System.out.println("Lista de libros DEVUELTOS...");
                         System.out.println(libros);
                     }
+
+                    break;
+                /************************************************************************************************************/
+                case "6":
+                    System.out.println("EJERCICIO n6");
+                    /** Crea una clase Empleado con:
+                     •	nombre (String), sueldoBase (double).
+                     •	Metodo calcularSalario() que devuelve el sueldo base.
+                     Crea 2 subclases:
+                     •	EmpleadoComision: añade ventasRealizadas (double) y porcentajeComision (double).
+                     Sobrescribe calcularSalario() para devolver sueldoBase + ventas * porcentajeComision.
+                     •	EmpleadoPorHoras: añade horasTrabajadas (int) y tarifaHora (double).
+                     Sobrescribe calcularSalario(): si las horas son ≤ 40, devuelve horas * tarifaHora;
+                     si superan 40, las horas extra se pagan al doble.
+                     Luego, crea un array de Empleado con varios objetos de cada tipo y muestra el salario de cada uno.
+                     **/
+
+
+
                     break;
                 /*****************************************************************************************************************/
                 case "-1":
@@ -213,7 +232,7 @@ public class Main {
                 /*****************************************************************************************************************/
 
                 default:
-                    System.out.println("Opcion no valida, ");
+                    System.out.println("Opcion no valida, vuelva a intentarlo ");
                     break;
             }
 
