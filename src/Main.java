@@ -13,6 +13,8 @@ public class Main {
             System.out.println("2 - Numero capicua ");
             System.out.println("3 - Numero repetido en lista ");
             System.out.println("4 - Palabra repetida en frase ");
+            System.out.println("5 - Crear y prestar libros ");
+
 
 
             String opcion = dato.nextLine();
@@ -178,7 +180,8 @@ public class Main {
                     }
 
                     for (Libro libro : libros) {
-                        System.out.println(libro);
+                        System.out.println("Libros creados: " );
+                        System.out.println(libros);
                     }
 
                     break;
